@@ -3,4 +3,3 @@ httpx
 uvicorn
 pydantic
 loguru
-streamlit
