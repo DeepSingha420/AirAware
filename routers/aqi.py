@@ -36,6 +36,8 @@ async def give_aqi(request: Request, Response_model=Result):
         "aqi":{
             "value": aqi_info,
             "category": aqi_cat
-        }
+        },
+        "source": "open-meteo"
     }
+
 
