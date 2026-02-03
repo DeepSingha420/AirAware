@@ -7,8 +7,8 @@ from services.aqi_service import aqi_data
 router = APIRouter()
 
 @router.get("/aqi")
-async def give_aqi(request: Request, Response_model=Result):
-    ip = await read_ip(request)
+async def give_aqi(request: Request, ip: str=None, Response_model=Result):
+    ip = await read_ip(request, ip)
     geo_data = await geo_ip(ip)
     aqi_info = await aqi_data(geo_data.get("latitude"), geo_data.get("longitude"))
     aqi_cat = "Unknown"
@@ -39,6 +39,7 @@ async def give_aqi(request: Request, Response_model=Result):
         },
         "source": "open-meteo"
     }
+
 
 
 
