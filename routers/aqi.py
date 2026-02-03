@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Request
 from models.schemas import Result
-from services.ip_service import public_ip
+from services.ip_service import read_ip
 from services.geo_service import geo_ip
 from services.aqi_service import aqi_data
 
@@ -39,6 +39,7 @@ async def give_aqi(request: Request, Response_model=Result):
         },
         "source": "open-meteo"
     }
+
 
 
 
