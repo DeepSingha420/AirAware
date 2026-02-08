@@ -31,9 +31,14 @@ pip install -r requirements.txt
 ```bash
 uvicorn main:app --reload
 ```
+![Local Server](./assets/uvicorn.gif)
 
 ### Step 4 : Execute AirAware Through 127.0.0.1
 Go to any browser and execute the uvicorn server url : http://127.0.0.1:8000/aqi
+![URL](./assets/url.gif)
+
+**JSON Output In The Browser :**
+![output](./assets/localhostOutput.png)
 
 ---
 
